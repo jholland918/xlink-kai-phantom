@@ -1,0 +1,97 @@
+/*BORDER COLOR: e8e8e8*/
+
+body {
+    background: #F1F1F1;
+    color: #222;
+}
+
+#bigAssContainer {
+    margin-top:0;
+}
+
+#panelCenter {
+    border: 0 !important;
+}
+
+#chatContainer {
+}
+
+.topGreen {
+    background:#3e3f3a;
+    color: #fff;
+}
+
+#btnNavCont, #btnNavNav, #btnNavFav, #btnChat, #btnArenas, #btnDebug, #btnMetrics, #btnPlayChat, #btnPlayArena, #btnLogin, #btnGames {
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    background-color: #fff;
+    color: #333333;
+}
+
+#btnNavCont:hover, #btnNavNav:hover, #btnNavFav:hover, #btnChat:hover, #btnArenas:hover, #btnDebug:hover, #btnMetrics:hover, #btnPlayChat:hover, #btnPlayArena:hover, #btnLogin:hover, #btnGames:hover {
+    border-top: 1px solid #AAE0FC;
+    border-right: 1px solid #AAE0FC;
+    border-left: 1px solid #AAE0FC;
+    border-bottom: 1px solid #AAE0FC;
+    background-color: #AAE0FC;
+}
+
+#menu {
+    background-color: #eee;
+    margin: 0 0px 3px 0px;
+    padding-top:3px;
+}
+
+.submenu {
+    background-color: #eee;
+    margin: 0 0px 3px 0px;
+    padding-top:3px;
+}
+
+#panelLeft, #panelCenter, #panelRight {
+    background: transparent;
+}
+
+#panelInfo {
+    background-color: #7E8B94;
+    color: #fff;
+}
+
+#panelInfoContent {
+    border: 0;
+}
+
+#chat > div
+{
+    border-top: 1px solid transparent;
+}
+
+#logo {
+    background-image: url('/skin/img/kailogo_28x28.gif');
+    top: 4px;
+}
+
+#msg {
+    border: 1px solid #aaa;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0,0,0,.075);
+    -moz-box-shadow:    inset 0 3px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 3px 3px rgba(0,0,0,.075);
+}
+
+#dialogBox {
+    background-color: #F1F1F1;
+}
+
+#allPlayers {
+    margin-left: 10px;
+}
+
+#emotIcons {
+    background: #222;
+}
+
+#emotIcons .emoticon {
+    border: 1px solid #222;
+}

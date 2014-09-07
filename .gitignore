@@ -1,0 +1,6 @@
+node_modules/
+nbproject/
+vendor/
+
+# Don't track build output
+dist/
