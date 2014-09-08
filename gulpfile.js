@@ -6,10 +6,11 @@ gulp.task('default', ['concat-copy', 'zip-dist']);
 
 gulp.task('concat-copy', function() {
     return gulp.src([
-        './vendor/jquery-1.11.1.min.js',
-        './src/scripts/jquery-no-conflict.js',
-        './src/scripts/script1.js',
-        './src/scripts/script2.js'
+        './bower_components/jquery/dist/jquery.min.js',
+        './bower_components/lodash/dist/lodash.min.js',
+        './src/scripts/bootstrap.js',
+        './src/scripts/sounds.js',
+        './src/scripts/skinInit.js'
     ])
             .pipe(concat('skin.js'))
             .pipe(gulp.dest('./dist/skins/phantom/')),

@@ -67,11 +67,3 @@ var myContactAdd = function (player,online)
 
 Sounds.push('pd_ring1;/skin/sounds/pd_ring1.mp3'); // play sound like this: soundPlay('pd_ring1');
 
-function skinInit()
-{
-	//$('topNav').innerHTML+="<input class=\"blackBtn\" type=\"button\" value=\"Chat Only\" onclick=\"chatToggle();\">";
-	contactAdd = myContactAdd;// demonstrates how to overwrite a method.
-	
-	soundPlay('pd_ring1');
-	
-};

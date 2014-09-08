@@ -1,0 +1,21 @@
+{
+  "name": "xlink-kai-phantom",
+  "version": "0.0.0",
+  "authors": [
+    "Jason Holland <jholland918@gmail.com>"
+  ],
+  "description": "XLink Kai skin",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1"
+  }
+}

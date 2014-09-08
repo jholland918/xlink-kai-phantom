@@ -1,6 +1,5 @@
+bower_components/
+dist/
 node_modules/
 nbproject/
 vendor/
-
-# Don't track build output
-dist/
