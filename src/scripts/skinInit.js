@@ -1,8 +1,7 @@
-function skinInit()
-{
-	//$('topNav').innerHTML+="<input class=\"blackBtn\" type=\"button\" value=\"Chat Only\" onclick=\"chatToggle();\">";
-	contactAdd = myContactAdd;// demonstrates how to overwrite a method.
-	
-	soundPlay('pd_ring1');
-	
-};
+// TODO: Add "Web Notifications" like https://developer.mozilla.org/en-US/docs/Web/API/Notification/Using_Web_Notifications#Simple_example
+
+function skinInit() {
+
+
+}
+;

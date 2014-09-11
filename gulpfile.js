@@ -9,7 +9,9 @@ gulp.task('concat-copy', function() {
         './bower_components/jquery/dist/jquery.min.js',
         './bower_components/lodash/dist/lodash.min.js',
         './src/scripts/bootstrap.js',
-        './src/scripts/sounds.js',
+        './src/scripts/triggerBinder.js',
+        './src/scripts/soundPlayer.js',
+        './src/scripts/soundRegulator.js',
         './src/scripts/skinInit.js'
     ])
             .pipe(concat('skin.js'))
