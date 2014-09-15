@@ -6,10 +6,12 @@ gulp.task('default', ['concat-copy', 'zip-dist']);
 
 gulp.task('concat-copy', function() {
     return gulp.src([
+        './src/scripts/fixdc_trial.js',
         './bower_components/jquery/dist/jquery.min.js',
         './bower_components/lodash/dist/lodash.min.js',
         './src/scripts/bootstrap.js',
         './src/scripts/triggerBinder.js',
+        './src/scripts/titleUpdater.js',
         './src/scripts/soundPlayer.js',
         './src/scripts/soundRegulator.js',
         './src/scripts/skinInit.js'

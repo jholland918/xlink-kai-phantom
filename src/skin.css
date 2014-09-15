@@ -1,4 +1,6 @@
-/*BORDER COLOR: e8e8e8*/
+/* fixdc_trial skin css start */
+.chatTime{width:60px;padding-right:10px}input#msg{ime-mode:inactive}
+/* fixdc_trial skin css end */
 
 body {
     background: #F1F1F1;

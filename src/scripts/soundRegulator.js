@@ -10,7 +10,7 @@ app.soundRegulator = (function() {
      * @returns {bool}
      */
     var permitEnterSound = function(sound, user) {
-        //debugger;
+        
         var key = sound + user;
        
         if (!allowSounds) {

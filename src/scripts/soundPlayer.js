@@ -38,6 +38,9 @@ app.soundPlayer = (function() {
      * @returns {undefined}
      */
     var init = function() {
+        
+        // Remove default pm sound effect
+        _.remove(Sounds, function(item) { return item == 'pm;/snd/kaiAlert.mp3'; });
 
         _(skinSounds).forEach(function(skinSound) {
             Sounds.push(skinSound + ';/skin/sounds/' + skinSound + '.mp3');
@@ -69,15 +72,13 @@ app.soundPlayer = (function() {
     });
 
     $j(document).on("KAI_CLIENT_LEAVES_VECTOR", function(event, params) {
-
+        
         if (allowSounds) {
             play('leave_1');
         }
     });
 
     $j(document).on("KAI_CLIENT_ARENA_PM", function(event, params) {
-
-        console.log('KAI_CLIENT_ARENA_PM');
 
         if (allowSounds) {
             play('pm_1');
@@ -86,16 +87,12 @@ app.soundPlayer = (function() {
 
     $j(document).on("KAI_CLIENT_PM", function(event, params) {
 
-        console.log('KAI_CLIENT_PM');
-
         if (allowSounds) {
             play('pm_2');
         }
     });
 
     $j(document).on("KAI_CLIENT_CONTACT_OFFLINE", function(event, params) {
-
-        console.log('KAI_CLIENT_CONTACT_OFFLINE');
 
         if (allowSounds) {
             play('contact_offline');
@@ -104,8 +101,6 @@ app.soundPlayer = (function() {
 
     $j(document).on("KAI_CLIENT_CONTACT_ONLINE", function(event, params) {
 
-        console.log('KAI_CLIENT_CONTACT_ONLINE');
-
         if (allowSounds) {
             play('contact_online');
         }
@@ -113,16 +108,12 @@ app.soundPlayer = (function() {
 
     $j(document).on("KAI_CLIENT_DETACH", function(event, params) {
 
-        console.log('KAI_CLIENT_DETACH');
-
         if (allowSounds) {
             play('detatch_1');
         }
     });
 
     $j(document).on("KAI_CLIENT_INVITE", function(event, params) {
-
-        console.log('KAI_CLIENT_INVITE');
 
         if (allowSounds) {
             play('pd_ring1');
