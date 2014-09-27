@@ -103,8 +103,26 @@ body {
     border: 1px solid #222;
 }
 
+.pmChatTitle {
+    background-color: #7E8B94;
+    color: #fff;
+}
+
+.pmClose {
+    background-color: #7E8B94;
+    color: #fff;
+}
+
 /* Skin Settings
 ------------------------------------------------------------------------------*/
+#skin-settings h1 {
+    font-weight: bold;
+    margin: 10px 0 10px;
+}
+
+#skin-settings p {
+    margin-bottom: 10px;
+}
 
 .form-ctrl {
     margin-bottom: 4px;
@@ -128,4 +146,12 @@ body {
 
 #sound-settings select {
     width:190px;
+}
+
+#web-notify-settings label {
+    padding: 4px;
+    background: #F8F8F8;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }

@@ -61,11 +61,11 @@ app.soundPlayer = (function() {
 
     var getSound = function(soundEvent) {
         var sound = localStorage.getItem('SKIN_SOUND-' + soundEvent);
-        
+
         if (!sound || sound === 'none') {
             sound = false;
         }
-        
+
         return sound;
     };
 
@@ -73,9 +73,9 @@ app.soundPlayer = (function() {
 
         sessionStorage.setItem('userEnterDate', new Date());
     });
-    
+
     $j(document).on("KAI_CLIENT_JOINS_VECTOR", function(event, params) {
-        
+
         var sound = getSound('KAI_CLIENT_JOINS_VECTOR');
         var user = params.bits[1];
 
@@ -85,7 +85,7 @@ app.soundPlayer = (function() {
     });
 
     $j(document).on("KAI_CLIENT_LEAVES_VECTOR", function(event, params) {
-        
+
         var sound = getSound('KAI_CLIENT_LEAVES_VECTOR');
 
         if (sound && allowSounds) {
@@ -95,6 +95,8 @@ app.soundPlayer = (function() {
 
     $j(document).on("KAI_CLIENT_ARENA_PM", function(event, params) {
         
+        app.webNotify.pmNotification(params.bits[2], params.bits[3]);
+
         var sound = getSound('KAI_CLIENT_ARENA_PM');
 
         if (sound && allowSounds) {
@@ -104,6 +106,8 @@ app.soundPlayer = (function() {
 
     $j(document).on("KAI_CLIENT_PM", function(event, params) {
         
+        app.webNotify.pmNotification(params.bits[2], params.bits[3]);
+
         var sound = getSound('KAI_CLIENT_PM');
 
         if (sound && allowSounds) {
@@ -112,7 +116,7 @@ app.soundPlayer = (function() {
     });
 
     $j(document).on("KAI_CLIENT_CONTACT_OFFLINE", function(event, params) {
-        
+
         var sound = getSound('KAI_CLIENT_CONTACT_OFFLINE');
 
         if (sound && allowSounds) {
@@ -121,7 +125,7 @@ app.soundPlayer = (function() {
     });
 
     $j(document).on("KAI_CLIENT_CONTACT_ONLINE", function(event, params) {
-        
+
         var sound = getSound('KAI_CLIENT_CONTACT_ONLINE');
 
         if (sound && allowSounds) {
@@ -130,7 +134,7 @@ app.soundPlayer = (function() {
     });
 
     $j(document).on("KAI_CLIENT_DETACH", function(event, params) {
-        
+
         var sound = getSound('KAI_CLIENT_DETACH');
 
         if (sound && allowSounds) {
@@ -139,32 +143,34 @@ app.soundPlayer = (function() {
     });
 
     $j(document).on("KAI_CLIENT_INVITE", function(event, params) {
-        
+
         var sound = getSound('KAI_CLIENT_INVITE');
 
         if (sound && allowSounds) {
             play(sound);
         }
     });
-    
+
     $j(document).on("KAI_CLIENT_CHAT", function(event, params) {
-        
-        var sound = getSound('KAI_CLIENT_CHAT');
 
-        if (sound && allowSounds) {
-            play(sound);
-        }
+        clientChatHandler(event, params);
     });
-    
+
     $j(document).on("KAI_CLIENT_CHAT2", function(event, params) {
+
+        clientChatHandler(event, params);
+    });
+
+    var clientChatHandler = function(event, params) {
         
-        // Not a typo, we're just going to use the same sound as 'KAI_CLIENT_CHAT'.
+        app.webNotify.chatNotification(params.bits[2], params.bits[3]);
+        
         var sound = getSound('KAI_CLIENT_CHAT');
 
         if (sound && allowSounds) {
             play(sound);
         }
-    });
+    };
 
     return {
         init: init,

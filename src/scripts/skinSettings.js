@@ -4,15 +4,19 @@ app.skinSettings = (function() {
         $j('.play-btn').click(function(event) {
             playButtonClick.call(this, event);
         });
-
-        $j('#skin-settings select').change(function() {
-            skinSelectChange.call(this);
-        });
         
         initSounds();
     };
     
     var initSounds = function() {
+        
+        if (!localStorage.getItem('web-notify-chat')) {
+            localStorage.setItem('web-notify-chat', 'yes');
+        }
+        
+        if (!localStorage.getItem('web-notify-pm')) {
+            localStorage.setItem('web-notify-pm', 'yes');
+        }
         
         _(app.config.soundEvents).forEach(function(soundEvent, index) {
             
@@ -27,6 +31,14 @@ app.skinSettings = (function() {
 
     var open = function() {
         
+        if (localStorage.getItem('web-notify-chat') === 'yes') {
+            $j('#web-notify-chat').prop('checked', true);
+        }
+        
+        if (localStorage.getItem('web-notify-pm') === 'yes') {
+            $j('#web-notify-pm').prop('checked', true);
+        }
+       
         _(app.config.soundEvents).forEach(function(soundEvent, index) {
             
             var soundId = 'SKIN_SOUND-' + soundEvent;
@@ -50,6 +62,17 @@ app.skinSettings = (function() {
     };
 
     var saveButtonClick = function() {
+        if($j('#web-notify-chat').is(":checked")) {
+            localStorage.setItem('web-notify-chat', 'yes');
+        } else {
+            localStorage.setItem('web-notify-chat', 'no');
+        }
+        
+        if ($j('#web-notify-pm').is(":checked")) {
+            localStorage.setItem('web-notify-pm', 'yes');
+        } else {
+            localStorage.setItem('web-notify-pm', 'no');
+        }
         
         _(app.config.soundEvents).forEach(function(soundEvent) { 
             var sound = $j('#SOUND-' + soundEvent).val();
@@ -64,13 +87,6 @@ app.skinSettings = (function() {
         var action = name.split("-")[1];
         var sound = $j('#SOUND-' + action).val();
         app.soundPlayer.play(sound);
-    };
-
-    var skinSelectChange = function() {
-//        var sound = $j(this).val();
-//        var id = $j(this).attr('id');
-//        var action = id.split("-")[1];
-//        alert(action);
     };
 
     return {

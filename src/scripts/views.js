@@ -7,6 +7,12 @@ app.views = (function() {
 var txt="";
 txt += "<div id=\"skinSettingsDialog\" title=\"Skin Settings\">";
 txt += "            <form id=\"skin-settings\">";
+txt += "                <div id=\"web-notify-settings\">";
+txt += "                    <h1>Web Notification Settings<\/h1>";
+txt += "                    <p>These are small pop-ups that appear on your desktop to show you a chat or PM has been received.<\/p>";
+txt += "                    <label><input type=\"checkbox\" id=\"web-notify-chat\" value=\"web-notify-chat\">Notify on chats<\/label>";
+txt += "                    <label><input type=\"checkbox\" id=\"web-notify-pm\" value=\"web-notify-pm\">Notify on PMs<\/label>";
+txt += "                <\/div>";
 txt += "                <div id=\"sound-settings\">                    ";
 txt += "                    <h1>Sound Settings<\/h1>";
 txt += "                    <div class=\"form-ctrl\">";
@@ -237,6 +243,7 @@ txt += "                    <\/div>";
 txt += "                <\/div>";
 txt += "            <\/form>";
 txt += "        <\/div>";
+
 
 
         return '<div style="display:none;">' + txt + '</div>';

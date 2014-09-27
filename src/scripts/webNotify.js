@@ -52,8 +52,42 @@ app.webNotify = (function() {
         });
     };
 
+    var chatNotification = function(player, message) {
+        
+        if (localStorage.getItem('web-notify-chat') !== 'yes' || player === whoAmI || player === 'Kai Orbital Mesh') {
+            return;
+        }
+       
+        var myNotification = new Notify(player, {
+            body: message,
+            tag: player + Date.now().toString(),
+            timeout: 4,
+            icon: '/skin/img/kai_icon_32.png'
+        });
+
+        myNotification.show();
+    };
+    
+    var pmNotification = function(player, message) {
+        
+        if (localStorage.getItem('web-notify-pm') !== 'yes' || player === whoAmI || player === 'Kai Orbital Mesh') {
+            return;
+        }
+       
+        var myNotification = new Notify(player, {
+            body: message,
+            tag: player + Date.now().toString(),
+            timeout: 4,
+            icon: '/skin/img/kai_icon_32.png'
+        });
+
+        myNotification.show();
+    };
+
     return {
-        init: init
+        init: init,
+        chatNotification: chatNotification,
+        pmNotification: pmNotification
     };
 
 })();

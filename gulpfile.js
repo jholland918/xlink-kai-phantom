@@ -6,7 +6,7 @@ gulp.task('default', ['concat-copy', 'zip-dist']);
 
 gulp.task('concat-copy', function() {
     return gulp.src([
-        './src/scripts/fixdc_trial.js',
+        //'./src/scripts/fixdc_trial.js',
         './bower_components/jquery/dist/jquery.min.js',
         './vendor/jquery-ui-1.11.1.custom/jquery-ui.min.js',
         './bower_components/lodash/dist/lodash.min.js',
