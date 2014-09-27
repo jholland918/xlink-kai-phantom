@@ -23,7 +23,7 @@ body {
     color: #fff;
 }
 
-#btnNavCont, #btnNavNav, #btnNavFav, #btnChat, #btnArenas, #btnDebug, #btnMetrics, #btnPlayChat, #btnPlayArena, #btnLogin, #btnGames {
+#btnNavCont, #btnNavNav, #btnNavFav, #btnChat, #btnArenas, #btnDebug, #btnMetrics, #btnPlayChat, #btnPlayArena, #btnLogin, #btnGames, #skinSettings {
     border-top: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
@@ -32,12 +32,17 @@ body {
     color: #333333;
 }
 
-#btnNavCont:hover, #btnNavNav:hover, #btnNavFav:hover, #btnChat:hover, #btnArenas:hover, #btnDebug:hover, #btnMetrics:hover, #btnPlayChat:hover, #btnPlayArena:hover, #btnLogin:hover, #btnGames:hover {
+#btnNavCont:hover, #btnNavNav:hover, #btnNavFav:hover, #btnChat:hover, #btnArenas:hover, #btnDebug:hover, #btnMetrics:hover, #btnPlayChat:hover, #btnPlayArena:hover, #btnLogin:hover, #btnGames:hover, #skinSettings:hover {
     border-top: 1px solid #AAE0FC;
     border-right: 1px solid #AAE0FC;
     border-left: 1px solid #AAE0FC;
     border-bottom: 1px solid #AAE0FC;
     background-color: #AAE0FC;
+}
+
+#skinSettings {
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #menu {
@@ -96,4 +101,31 @@ body {
 
 #emotIcons .emoticon {
     border: 1px solid #222;
+}
+
+/* Skin Settings
+------------------------------------------------------------------------------*/
+
+.form-ctrl {
+    margin-bottom: 4px;
+    padding: 4px;
+    background: #F8F8F8;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#skin-settings label {
+    width: 225px;
+    display: inline-block;
+}
+
+.play-btn {
+    height:20px;
+    width:20px;
+    margin-left: 10px;
+}
+
+#sound-settings select {
+    width:190px;
 }

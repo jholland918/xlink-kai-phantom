@@ -19,7 +19,9 @@ app.triggerBinder = (function() {
             "KAI_CLIENT_ARENA_PM",
             "KAI_CLIENT_PM",
             "KAI_CLIENT_INVITE",
-            "KAI_CLIENT_DETACH"
+            "KAI_CLIENT_DETACH",
+            "KAI_CLIENT_CHAT",
+            "KAI_CLIENT_CHAT2"
         ];
 
         _(commandNames).forEach(function(commandName) {

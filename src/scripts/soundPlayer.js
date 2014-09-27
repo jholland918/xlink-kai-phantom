@@ -38,9 +38,11 @@ app.soundPlayer = (function() {
      * @returns {undefined}
      */
     var init = function() {
-        
+
         // Remove default pm sound effect
-        _.remove(Sounds, function(item) { return item == 'pm;/snd/kaiAlert.mp3'; });
+        _.remove(Sounds, function(item) {
+            return item == 'pm;/snd/kaiAlert.mp3';
+        });
 
         _(skinSounds).forEach(function(skinSound) {
             Sounds.push(skinSound + ';/skin/sounds/' + skinSound + '.mp3');
@@ -57,66 +59,110 @@ app.soundPlayer = (function() {
         soundPlay(sound);
     };
 
+    var getSound = function(soundEvent) {
+        var sound = localStorage.getItem('SKIN_SOUND-' + soundEvent);
+        
+        if (!sound || sound === 'none') {
+            sound = false;
+        }
+        
+        return sound;
+    };
+
     $j(document).on("KAI_CLIENT_VECTOR", function(event, params) {
 
         sessionStorage.setItem('userEnterDate', new Date());
     });
-
+    
     $j(document).on("KAI_CLIENT_JOINS_VECTOR", function(event, params) {
-
+        
+        var sound = getSound('KAI_CLIENT_JOINS_VECTOR');
         var user = params.bits[1];
 
-        if (app.soundRegulator.permitEnterSound('enter_1', user)) {
-            play('enter_1');
+        if (sound && app.soundRegulator.permitEnterSound('enter', user)) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_LEAVES_VECTOR", function(event, params) {
         
-        if (allowSounds) {
-            play('leave_1');
+        var sound = getSound('KAI_CLIENT_LEAVES_VECTOR');
+
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_ARENA_PM", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_ARENA_PM');
 
-        if (allowSounds) {
-            play('pm_1');
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_PM", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_PM');
 
-        if (allowSounds) {
-            play('pm_2');
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_CONTACT_OFFLINE", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_CONTACT_OFFLINE');
 
-        if (allowSounds) {
-            play('contact_offline');
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_CONTACT_ONLINE", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_CONTACT_ONLINE');
 
-        if (allowSounds) {
-            play('contact_online');
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_DETACH", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_DETACH');
 
-        if (allowSounds) {
-            play('detatch_1');
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
     $j(document).on("KAI_CLIENT_INVITE", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_INVITE');
 
-        if (allowSounds) {
-            play('pd_ring1');
+        if (sound && allowSounds) {
+            play(sound);
+        }
+    });
+    
+    $j(document).on("KAI_CLIENT_CHAT", function(event, params) {
+        
+        var sound = getSound('KAI_CLIENT_CHAT');
+
+        if (sound && allowSounds) {
+            play(sound);
+        }
+    });
+    
+    $j(document).on("KAI_CLIENT_CHAT2", function(event, params) {
+        
+        // Not a typo, we're just going to use the same sound as 'KAI_CLIENT_CHAT'.
+        var sound = getSound('KAI_CLIENT_CHAT');
+
+        if (sound && allowSounds) {
+            play(sound);
         }
     });
 
