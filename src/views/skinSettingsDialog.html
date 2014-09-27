@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../skin.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body style="background: #fff;">
+        <div id="skinSettingsDialog" title="Skin Settings">
+            <form id="skin-settings">
+                <div id="web-notify-settings">
+                    <h1>Web Notification Settings</h1>
+                    <p>These are small pop-ups that appear on your desktop to show you a chat or PM has been received.</p>
+                    <label><input type="checkbox" id="web-notify-chat" value="web-notify-chat">Notify on chats</label>
+                    <label><input type="checkbox" id="web-notify-pm" value="web-notify-pm">Notify on PMs</label>
+                </div>
+                <div id="sound-settings">                    
+                    <h1>Sound Settings</h1>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_CHAT">New chat message</label>
+                        <select id="SOUND-KAI_CLIENT_CHAT">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option value="chat_2">chat_2 (default)</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_CHAT" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_JOINS_VECTOR">Player Joins Room</label>
+                        <select id="SOUND-KAI_CLIENT_JOINS_VECTOR">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option value="enter_1">enter_1 (default)</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_JOINS_VECTOR" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_LEAVES_VECTOR">Player Leaves Room</label>
+                        <select id="SOUND-KAI_CLIENT_LEAVES_VECTOR">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option value="leave_1">leave_1 (default)</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_LEAVES_VECTOR" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_PM">PM Received</label>
+                        <select id="SOUND-KAI_CLIENT_PM">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option value="pm_2">pm_2 (default)</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_PM" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_ARENA_PM">Arena PM Received</label>
+                        <select id="SOUND-KAI_CLIENT_ARENA_PM">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option value="pm_1">pm_1 (default)</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_ARENA_PM" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_CONTACT_ONLINE">Contact comes online</label>
+                        <select id="SOUND-KAI_CLIENT_CONTACT_ONLINE">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option value="contact_online">contact_online (default)</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_CONTACT_ONLINE" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_CONTACT_OFFLINE">Contact goes offline</label>
+                        <select id="SOUND-KAI_CLIENT_CONTACT_OFFLINE">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option value="contact_offline">contact_offline (default)</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_CONTACT_OFFLINE" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_DETACH">Detached from XLink Kai Engine</label>
+                        <select id="SOUND-KAI_CLIENT_DETACH">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option value="detatch_1">detatch_1 (default)</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option>invite_2</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_DETACH" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="SOUND-KAI_CLIENT_INVITE">Invite received</label>
+                        <select id="SOUND-KAI_CLIENT_INVITE">
+                            <option>none</option>
+                            <option>chat_1</option>
+                            <option>chat_2</option>
+                            <option>chat_3</option>
+                            <option>contact_offline</option>
+                            <option>contact_online</option>
+                            <option>detatch_1</option>
+                            <option>detatch_2</option>
+                            <option>detatch_3</option>
+                            <option>detatch_4</option>
+                            <option>enter_1</option>
+                            <option>enter_2</option>
+                            <option>invite_1</option>
+                            <option value="invite_2">invite_2 (default)</option>
+                            <option>leave_1</option>
+                            <option>leave_2</option>
+                            <option>pd_ring1</option>
+                            <option>pm_1</option>
+                            <option>pm_2</option>
+                        </select>
+                        <input name="PLAY-KAI_CLIENT_INVITE" class="play-btn" alt="play" type="image" src="/skin/img/play_20x20.png">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

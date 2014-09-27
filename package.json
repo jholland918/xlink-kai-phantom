@@ -1,0 +1,17 @@
+{
+  "name": "xlink-kai-phantom",
+  "version": "0.0.0",
+  "description": "XLink Kai Skin",
+  "main": "./src/skin.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-concat": "^2.3.5",
+    "gulp": "^3.8.7",
+    "gulp-zip": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Holland",
+  "license": "MIT"
+}
